@@ -14,7 +14,6 @@ function reset() {
 function startSlide() {
     for (let i = 1; i <= sliderImages.length; i++) {
         document.querySelector(".slide" + i).style.backgroundImage = "url('images/gallery/" + i + ".jpg')";
-        //;
     }
     reset();
     sliderImages[0].style.display = "block";
@@ -53,22 +52,3 @@ arrowRight.addEventListener("click", function() {
 });
 
 startSlide();
-// making thumbnail bar
-
-var thumbBar = document.querySelector('.thumb-bar');
-
-function makeThumbBar() {
-    for (let i = 1; i < sliderImages.length; i++) {
-        var newImage = document.createElement('img');
-        newImage.src = 'images/gallery/' + i + '.jpg';
-        thumbBar.appendChild(newImage);
-        newImage.onclick = function(e) {
-            var imgSrc = e.target.getAttribute("src");
-            setDisplay(imgSrc);
-        }
-    }
-}
-
-function setDisplay(source) {
-    displayedImage.src = source;
-  }

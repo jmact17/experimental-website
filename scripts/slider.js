@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("hey");
     let wrapper = document.querySelector("#wrapper");
     let topLayer = document.querySelector(".top");
     let handle = document.querySelector(".handle");
